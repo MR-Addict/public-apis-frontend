@@ -1,14 +1,18 @@
-import './globals.css'
+import "./globals.css";
+import { Navbar, Sidebar, Footer } from "../components";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html lang='en'>
       <head />
-      <body>{children}</body>
+      <body className='bg-main-bg min-h-screen w-full'>
+        <Navbar />
+        <div className='flex flex-row px-[15vw] w-full my-10 gap-10'>
+          <Sidebar />
+          {children}
+        </div>
+        <Footer />
+      </body>
     </html>
-  )
+  );
 }
