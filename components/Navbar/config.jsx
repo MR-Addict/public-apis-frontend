@@ -7,11 +7,6 @@ const menuData = [
     href: "/",
     icon: <AiFillHome />,
   },
-  {
-    title: "Palyground",
-    href: "/",
-    icon: <FaAtlassian />,
-  },
 ];
 
 export default menuData;
