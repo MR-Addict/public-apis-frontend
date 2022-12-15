@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { fetchCategory } from "../../utils/api";
+import { fetchCategory } from "../api";
 
 export default async function Sidebar() {
   const msg = await fetchCategory();
