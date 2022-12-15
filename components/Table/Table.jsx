@@ -2,6 +2,17 @@ import { RiShareBoxLine } from "react-icons/ri";
 
 import { fetchEntry } from "../../utils/api";
 
+function StatusCard({ status, title }) {
+  return (
+    <span
+      style={{ backgroundColor: status ? "#B3FFAE" : "#FF597B" }}
+      className='p-2 px-3 rounded-md relative cursor-pointer'
+    >
+      {title}
+    </span>
+  );
+}
+
 function EntryCard({ item }) {
   return (
     <div className='flex flex-col gap-2 bg-white shadow-md p-4 rounded-md justify-between overflow-x-auto'>
@@ -15,15 +26,9 @@ function EntryCard({ item }) {
         <p>{item.Description}</p>
       </div>
       <div className='flex flex-row items-center justify-between'>
-        <span style={{ backgroundColor: item.HTTPS ? "#B3FFAE" : "#FF597B" }} className='py-2 px-3 rounded-md'>
-          HTTPS
-        </span>
-        <span style={{ backgroundColor: item.Cors === "no" ? "#B3FFAE" : "#FF597B" }} className='p-2 px-3 rounded-md'>
-          Cors
-        </span>
-        <span style={{ backgroundColor: item.Auth === "" ? "#B3FFAE" : "#FF597B" }} className='p-2 px-3 rounded-md'>
-          Auth
-        </span>
+        <StatusCard status={item.HTTPS === true} title='HTTPS' />
+        <StatusCard status={item.Cors === "no"} title='Cors' />
+        <StatusCard status={item.Auth === ""} title='Auth' />
       </div>
     </div>
   );
