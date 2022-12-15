@@ -15,8 +15,10 @@ function MenuCard({ item }) {
 
 export default function Navbar() {
   return (
-    <div className='w-full h-[10vh] shadow-lg bg-secondary-bg px-[15vw] flex flex-row items-center justify-between'>
-      <h1 className='font-bold text-2xl'>Public APIs</h1>
+    <div className='w-full h-[10vh] shadow-lg bg-secondary-bg px-[13vw] flex flex-row items-center justify-between'>
+      <Link href='/' className='font-bold text-2xl'>
+        Free Public APIs
+      </Link>
       <div className='flex flex-row gap-4 text-lg'>
         {menuData.map((item) => (
           <MenuCard key={item.title} item={item} />

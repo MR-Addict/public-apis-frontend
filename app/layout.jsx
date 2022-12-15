@@ -7,7 +7,7 @@ export default function RootLayout({ children }) {
       <head />
       <body className='bg-main-bg min-h-screen w-full'>
         <Navbar />
-        <div className='flex flex-row px-[15vw] w-full my-10 gap-10'>
+        <div className='flex flex-row px-[13vw] w-full my-10 gap-10'>
           <Sidebar />
           {children}
         </div>

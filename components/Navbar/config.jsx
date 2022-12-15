@@ -1,5 +1,5 @@
-import { AiFillHome,AiFillPlayCircle } from "react-icons/ai";
-import {FaSearch} from "react-icons/fa"
+import { AiFillHome } from "react-icons/ai";
+import { FaAtlassian } from "react-icons/fa";
 
 const menuData = [
   {
@@ -8,14 +8,9 @@ const menuData = [
     icon: <AiFillHome />,
   },
   {
-    title: "Search",
-    href: "/",
-    icon: <FaSearch />,
-  },
-  {
     title: "Palyground",
     href: "/",
-    icon: <AiFillPlayCircle />,
+    icon: <FaAtlassian />,
   },
 ];
 
