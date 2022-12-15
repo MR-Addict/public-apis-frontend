@@ -1,4 +1,5 @@
 import { RiShareBoxLine } from "react-icons/ri";
+
 import { fetchEntry } from "../../utils/api";
 
 function EntryCard({ item }) {
@@ -13,15 +14,15 @@ function EntryCard({ item }) {
         </div>
         <p>{item.Description}</p>
       </div>
-      <div className='flex flex-row items-center justify-between gap-2'>
-        <span style={{ backgroundColor: "#B3FFAE" }} className='p-2 rounded-md'>
-          {item.HTTPS ? "Https" : "Http"}
+      <div className='flex flex-row items-center justify-between'>
+        <span style={{ backgroundColor: item.HTTPS ? "#B3FFAE" : "#FF597B" }} className='py-2 px-3 rounded-md'>
+          HTTPS
         </span>
-        <span style={{ backgroundColor: "#82C3EC" }} className='p-2 rounded-md'>
-          {item.Cors === "no" ? "NoCors" : "Cors"}
+        <span style={{ backgroundColor: item.Cors === "no" ? "#B3FFAE" : "#FF597B" }} className='p-2 px-3 rounded-md'>
+          Cors
         </span>
-        <span style={{ backgroundColor: "#ADA2FF" }} className='p-2 rounded-md whitespace-nowrap'>
-          {item.Category}
+        <span style={{ backgroundColor: item.Auth === "" ? "#B3FFAE" : "#FF597B" }} className='p-2 px-3 rounded-md'>
+          Auth
         </span>
       </div>
     </div>
