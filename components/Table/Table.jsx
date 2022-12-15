@@ -3,7 +3,7 @@ import { fetchEntry } from "../../utils/api";
 
 function EntryCard({ item }) {
   return (
-    <div className='flex flex-col gap-2 bg-white shadow-md p-4 rounded-md justify-between'>
+    <div className='flex flex-col gap-2 bg-white shadow-md p-4 rounded-md justify-between overflow-x-auto'>
       <div>
         <div className='py-2 flex flex-row items-center justify-between'>
           <h1 className='text-xl font-bold'>{item.API}</h1>
@@ -20,7 +20,7 @@ function EntryCard({ item }) {
         <span style={{ backgroundColor: "#82C3EC" }} className='p-2 rounded-md'>
           {item.Cors === "no" ? "NoCors" : "Cors"}
         </span>
-        <span style={{ backgroundColor: "#ADA2FF" }} className='p-2 rounded-md whitespace-nowrap overflow-x-clip'>
+        <span style={{ backgroundColor: "#ADA2FF" }} className='p-2 rounded-md whitespace-nowrap'>
           {item.Category}
         </span>
       </div>
@@ -36,7 +36,7 @@ export default async function Table({ categoryid }) {
       <h1 className='font-bold text-3xl pb-4'>
         {categoryid}({entries.length})
       </h1>
-      <div className='grid grid-cols-3 gap-4'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 xl:grid-cols-3'>
         {entries
           .filter((item) => item.Category === categoryid)
           .map((item) => (

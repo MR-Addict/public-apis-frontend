@@ -9,4 +9,4 @@ This is a project for [Public APIs](https://github.com/public-apis/public-apis) 
 
 > Demo link:
 >
-> - [https://beta.nextjs.org/docs](https://beta.nextjs.org/docs)
+> - [https://publicapisfrontend.azurewebsites.net](https://publicapisfrontend.azurewebsites.net)
