@@ -3,7 +3,10 @@ import Link from "next/link";
 
 function MenuCard({ item }) {
   return (
-    <Link href={item.href} className='flex flex-row items-center gap-2'>
+    <Link
+      href={item.href}
+      className='flex flex-row items-center gap-2 border-b-2 border-gray-700 border-opacity-0 hover:border-opacity-100'
+    >
       <span>{item.icon}</span>
       <span>{item.title}</span>
     </Link>
