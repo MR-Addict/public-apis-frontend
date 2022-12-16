@@ -1,6 +1,15 @@
 import { RiShareBoxLine } from "react-icons/ri";
 
-import { fetchEntry } from "../api";
+async function fetchEntry(categoryid) {
+  const res = await fetch("https://api.publicapis.org/entries");
+  if (!res.ok) {
+    throw new Error("Failed to fetch entries");
+  } else {
+    const data = await res.json();
+    console.log("Entries fetched!");
+    return data.entries.filter((item) => item.Category === categoryid);
+  }
+}
 
 function EntryCard({ item }) {
   return (
@@ -15,23 +24,22 @@ function EntryCard({ item }) {
         <p>{item.Description}</p>
       </div>
       <div className='flex flex-row items-center justify-between gap-3'>
-        <span style={{ backgroundColor: "#B3FFAE" }} className='p-2 rounded-md'>
+        <span style={{ backgroundColor: "#B3FFAE" }} className='p-2 rounded-md cursor-pointer'>
           {item.HTTPS ? "HTTPS" : "HTTP"}
         </span>
-        <span style={{ backgroundColor: "#82C3EC" }} className='p-2 rounded-md'>
+        <span style={{ backgroundColor: "#82C3EC" }} className='p-2 rounded-md cursor-pointer'>
           {item.Cors === "no" ? "NoCors" : "Cors"}
         </span>
-        <span style={{ backgroundColor: "#ADA2FF" }} className='p-2 rounded-md'>
+        <span style={{ backgroundColor: "#ADA2FF" }} className='p-2 rounded-md cursor-pointer'>
           {item.Auth === "" ? "NoAuth" : "Auth"}
         </span>
       </div>
     </div>
   );
 }
+
 export default async function Table({ categoryid }) {
-  const msg = await fetchEntry();
-  let entries = msg.data;
-  if (categoryid !== "All") entries = msg.data.filter((item) => item.Category === categoryid);
+  const entries = await fetchEntry(categoryid);
   return (
     <div>
       <h1 className='font-bold text-3xl pb-4'>
