@@ -1,6 +1,6 @@
 import { RiShareBoxLine } from "react-icons/ri";
 
-import entriesData from "./config";
+import readJson from "../../lib/readJson";
 
 function EntryCard({ item }) {
   return (
@@ -30,6 +30,7 @@ function EntryCard({ item }) {
 }
 
 export default async function Table({ categoryid }) {
+  const entriesData = await readJson("entries.json");
   const entries = entriesData.entries.filter((item) => item.Category === categoryid);
   return (
     <div>

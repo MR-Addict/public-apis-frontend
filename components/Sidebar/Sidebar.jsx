@@ -1,8 +1,9 @@
 import Link from "next/link";
 
-import categoriesData from "./config";
+import readJson from "../../lib/readJson";
 
 export default async function Sidebar() {
+  const categoriesData = await readJson("categories.json");
   return (
     <div className='flex flex-col gap-2'>
       <div className='sticky top-0 left-0'>

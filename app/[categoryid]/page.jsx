@@ -1,5 +1,5 @@
-import { Table } from "../../components";
-import categoriesData from "../../components/Sidebar/config";
+import Table from "./Table";
+import readJson from "../../lib/readJson";
 
 export default async function Page({ params: { categoryid } }) {
   const decoded_categoryid = decodeURIComponent(categoryid);
@@ -7,6 +7,7 @@ export default async function Page({ params: { categoryid } }) {
 }
 
 export async function generateStaticParams() {
+  const categoriesData = await readJson("categories.json");
   return categoriesData.categories.map((category) => ({
     categoryid: category,
   }));
