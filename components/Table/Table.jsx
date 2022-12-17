@@ -1,15 +1,6 @@
 import { RiShareBoxLine } from "react-icons/ri";
 
-async function fetchEntry(categoryid) {
-  const res = await fetch("https://api.publicapis.org/entries");
-  if (!res.ok) {
-    throw new Error("Failed to fetch entries");
-  } else {
-    const data = await res.json();
-    console.log("Entries fetched!");
-    return data.entries.filter((item) => item.Category === categoryid);
-  }
-}
+import entriesData from "./config";
 
 function EntryCard({ item }) {
   return (
@@ -39,7 +30,7 @@ function EntryCard({ item }) {
 }
 
 export default async function Table({ categoryid }) {
-  const entries = await fetchEntry(categoryid);
+  const entries = entriesData.entries.filter((item) => item.Category === categoryid);
   return (
     <div>
       <h1 className='font-bold text-3xl pb-4'>

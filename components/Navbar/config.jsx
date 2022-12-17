@@ -1,5 +1,4 @@
 import { AiFillHome } from "react-icons/ai";
-import { FaAtlassian } from "react-icons/fa";
 
 const menuData = [
   {

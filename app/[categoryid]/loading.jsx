@@ -1,4 +1,3 @@
-import { AiOutlineLoading3Quarters } from "react-icons/ai";
 import Image from "next/image";
 
 import loader from "./loader.gif";
