@@ -1,8 +1,8 @@
 import { RiShareBoxLine } from "react-icons/ri";
 
-export default function EntityCard({ item }) {
+export default function EntryCard({ item }) {
   return (
-    <div className='flex flex-col gap-2 bg-white shadow-md p-4 rounded-md justify-between overflow-x-auto'>
+    <div className='flex flex-col gap-2 border-2 border-slate-200 shadow-md p-4 rounded-md justify-between overflow-x-auto'>
       <div>
         <div className='py-2 flex flex-row items-center justify-between'>
           <h1 className='text-xl font-bold'>{item.API}</h1>

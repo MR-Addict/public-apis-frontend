@@ -8,7 +8,7 @@ export default async function Page() {
   const categoriesData = await readJson("categories.json");
   return (
     <div className='w-full h-full flex flex-col items-center justify-start gap-10'>
-      <div className='w-[400px] md:w-[500px]'>
+      <div className='w-[400px] md:w-[500px] mt-5'>
         <Image src={welcome} alt='welcome' placeholder='blur' className='object-center' />
       </div>
       <div className='flex flex-col items-center justify-center gap-7 whitespace-nowrap'>
