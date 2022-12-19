@@ -10,6 +10,7 @@
 
 @layer base {
   [data-nextjs-scroll-focus-boundary] {
+    display: flex;
     width: 100%;
   }
 }

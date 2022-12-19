@@ -1,8 +1,6 @@
 import { RiShareBoxLine } from "react-icons/ri";
 
-import readJson from "../../lib/readJson";
-
-function EntryCard({ item }) {
+export default function EntityCard({ item }) {
   return (
     <div className='flex flex-col gap-2 bg-white shadow-md p-4 rounded-md justify-between overflow-x-auto'>
       <div>
@@ -24,25 +22,6 @@ function EntryCard({ item }) {
         <span style={{ backgroundColor: "#ADA2FF" }} className='p-2 rounded-md cursor-pointer'>
           {item.Auth === "" ? "NoAuth" : "Auth"}
         </span>
-      </div>
-    </div>
-  );
-}
-
-export default async function Table({ categoryid }) {
-  const entriesData = await readJson("entries.json");
-  const entries = entriesData.entries.filter((item) => item.Category === categoryid);
-  return (
-    <div>
-      <h1 className='font-bold text-3xl pl-2 pb-2'>
-        {categoryid}({entries.length})
-      </h1>
-      <div className='grid gap-4 grid-cols-1 xl:grid-cols-3'>
-        {entries
-          .filter((item) => item.Category === categoryid)
-          .map((item) => (
-            <EntryCard item={item} key={item.API} />
-          ))}
       </div>
     </div>
   );

@@ -8,6 +8,9 @@ export default function Footer() {
       <a href='https://github.com/public-apis/public-apis' target='_blank' className='underline'>
         Public APIs
       </a>
+      <a href='https://github.com/mr-addict/public-apis-frontend' target='_blank' className='underline'>
+        Source
+      </a>
     </footer>
   );
 }

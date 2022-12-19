@@ -9,4 +9,4 @@ This is a project for [Public APIs](https://github.com/public-apis/public-apis) 
 
 > Demo link:
 >
-> - [https://publicapisfrontend.azurewebsites.net](https://publicapisfrontend.azurewebsites.net)
+> - [https://publicapis.vercel.app](https://publicapis.vercel.app)
