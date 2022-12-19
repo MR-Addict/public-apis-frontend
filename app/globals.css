@@ -5,14 +5,11 @@
 * {
   padding: 0;
   margin: 0;
-}
-
-body {
   box-sizing: border-box;
 }
 
-@media screen and (max-width: 800px) {
-  html {
-    font-size: 70%;
+@layer base {
+  [data-nextjs-scroll-focus-boundary] {
+    width: 100%;
   }
 }

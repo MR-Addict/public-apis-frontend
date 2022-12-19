@@ -5,9 +5,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang='en'>
       <head />
-      <body className='bg-main-bg min-h-screen w-full'>
+      <body>
         <Navbar />
-        <div className='flex flex-row px-[13vw] w-full my-10 gap-10'>
+        <div className='flex flex-row mx-5 md:mx-48 my-10 gap-5'>
           <Sidebar />
           {children}
         </div>

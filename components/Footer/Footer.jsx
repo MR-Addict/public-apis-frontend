@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className='w-full py-5 flex gap-3 items-center justify-center bg-secondary-bg shadow-xl text-gray-600'>
+    <footer className='w-full py-5 flex gap-3 items-center justify-center bg-slate-100 shadow-xl text-slate-600'>
       <span>&copy; Copyright {new Date().getFullYear()}</span>
       <a href='https://github.com/mr-addict' target='_blank' className='underline'>
         MR-Addict

@@ -34,10 +34,10 @@ export default async function Table({ categoryid }) {
   const entries = entriesData.entries.filter((item) => item.Category === categoryid);
   return (
     <div>
-      <h1 className='font-bold text-3xl pb-4'>
+      <h1 className='font-bold text-3xl pl-2 pb-2'>
         {categoryid}({entries.length})
       </h1>
-      <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 xl:grid-cols-3'>
+      <div className='grid gap-4 grid-cols-1 xl:grid-cols-3'>
         {entries
           .filter((item) => item.Category === categoryid)
           .map((item) => (
