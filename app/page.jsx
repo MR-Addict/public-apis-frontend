@@ -12,7 +12,7 @@ export default async function Page() {
         <Image src={welcome} alt='welcome' placeholder='blur' className='object-center' />
       </div>
       <div className='flex flex-col items-center justify-center gap-7 whitespace-nowrap'>
-        <h1 className='text-2xl md:text-4xl font-bold text-slate-700'>FIND FREE PUBLIC APIS</h1>
+        <h1 className='text-2xl md:text-4xl font-bold text-slate-700'>FREE PUBLIC APIS</h1>
         <div className='flex flex-col md:flex-row items-center justify-center gap-7'>
           <Link
             href={categoriesData.categories[0]}

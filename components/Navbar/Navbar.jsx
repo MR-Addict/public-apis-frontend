@@ -20,7 +20,7 @@ export default function Navbar() {
         <h1 className='text-slate-700'>Public</h1>
         <h1 className='px-2 bg-purple-600 rounded-md text-white'>APIs</h1>
       </Link>
-      <div className='flex flex-row gap-2 text-lg'>
+      <div className='flex flex-row gap-2 md:gap-4 text-lg'>
         {menuData.map((item, index) => (
           <MenuCard key={index} item={item} />
         ))}
