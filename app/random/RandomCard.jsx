@@ -6,7 +6,7 @@ import { useState } from "react";
 import EntryCard from "../../components/EntryCard/EntryCard";
 
 export default function RandomCard() {
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState(null);
   const [randomEntity, setRandomEntity] = useState(null);
 
   const handleClick = async () => {
@@ -15,7 +15,7 @@ export default function RandomCard() {
       .then((res) => res.json())
       .then((data) => {
         setRandomEntity(data.entries[0]);
-        setMessage("");
+        setMessage(null);
       })
       .catch((err) => {
         setRandomEntity(null);
@@ -29,7 +29,7 @@ export default function RandomCard() {
         <IoMdRefresh size={40} />
       </button>
       {randomEntity && <EntryCard item={randomEntity} />}
-      {!randomEntity && <p>{message}</p>}
+      {!randomEntity && message && <p>{message}</p>}
     </div>
   );
 }

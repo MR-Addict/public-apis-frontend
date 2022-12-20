@@ -7,7 +7,7 @@ export default function RootLayout({ children }) {
       <head />
       <body>
         <Navbar />
-        <div className='flex flex-row mx-5 md:mx-48 my-10 gap-5'>
+        <div className='flex flex-col md:flex-row mx-5 md:mx-48 my-5 md:my-10 gap-5'>
           <Sidebar />
           {children}
         </div>
