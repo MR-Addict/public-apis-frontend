@@ -3,10 +3,8 @@ import Link from "next/link";
 
 import welcome from "../data/welcome.jpg";
 import readJson from "../lib/readJson";
-import writeJson from "../lib/writeJson";
 
 export default async function Page() {
-  await writeJson();
   const categoriesData = await readJson("categories.json");
   return (
     <div className='w-full h-full flex flex-col items-center justify-start gap-10'>
